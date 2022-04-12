@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <p id="p1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem enim accusantium aut excepturi magnam debitis, nisi voluptatum! Quam nobis vitae earum obcaecati, quidem ratione exercitationem aut? Officiis itaque quos repudiandae!</p>
+    <button id="btn">hide</button>
+    <button id="show">show</button>
+    <div id="fde" style=" background-color: rgb(12, 99, 118); width: 200px; height: 200px; "></div>
+    <button id="buttn">fade out</button>
+    <button id="button">fade in</button>
+    <div id="container" style="width: 200px;height: 200px; background-color: aqua;">
+        <h2>hello</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus ipsum aspernatur dolor accusantium consectetur, vitae, exercitationem facilis eos repellendus porro blanditiis. Dolore fugiat sapiente sunt accusantium, repellat voluptates aperiam
+            ab.
+        </p>
+    </div>
+    <script>
+        $("h1").remove()
+            // $("#container").empty()
+        $("#container").addClass("wlcme")
+        $(".wlcme").width(300)
+        $(".wlcme").height(150)
+        console.log($(".wlcme").width())
+            // console.log($("h1").html())
+        $("h1").html("welcome")
+
+        $(document).ready(function() {
+            $("#p1 ").css("background-color ", "cyan ")
+
+        })
+        $("#btn ").click(function() {
+            $("#p1 ").hide()
+        })
+        $("#show ").click(function() {
+            $("#p1 ").toggle()
+        })
+        $("#buttn").click(function() {
+            $("#fde").fadeOut()
+
+        })
+        $("#button").click(function() {
+            $("#fde").fadeToggle()
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .frm {
+            margin: 10px 200px;
+            padding: 50px;
+            border: 1px solid;
+        }
+        
+        .b {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frm">
+        <!-- <form action=""> -->
+        <div class="form-group ">
+            <label for="name ">name</label>
+            <input type="text " class="form-control " id="name ">
+            <small id="b1 " class="b "></small>
+
+        </div>
+        <div class="form-group ">
+            <label for="email ">Email address</label>
+            <input type="email " class="form-control " id="email ">
+            <small id="b0 " class="b "></small>
+
+        </div>
+        <div class="form-group ">
+            <label for="mobile_number">mobile_number</label>
+            <input type="number" class="form-control " id="mobile_number">
+            <small id="b2" class="b"></small>
+
+        </div>
+        <div class="form-group">
+            <label for="password1">Password</label>
+            <input type="password" class="form-control " id="password1 ">
+            <small id="b3 " class="b "></small>
+        </div>
+        <div class="form-group ">
+            <label for="password2 ">Confirm Password</label>
+            <input type="password " class="form-control " id="password2 ">
+            <small id="b4 " class="b "></small>
+        </div>
+        <button type="submit " class="btn btn-danger btn-block " id="submt">Submit</button>
+        <!-- </form> -->
+
+    </div>
+    <script>
+        $('#submt').click(function() {
+            console.log('not')
+            mobileNo = $('#mobile_number').val()
+            console.log(mobileNo)
+
+            valid = true;
+            if ($('#name').val() == '') {
+                $("#b1 ").html("name can be null ")
+
+            } else {
+                $("#b1 ").html(" ")
+                    // status = 0
+            }
+            if ($('#email').val() == '') {
+                $("#b0 ").html("mail can be null ")
+
+            } else {
+                $("#b0 ").html(" ")
+                    // status = 0
+            }
+            if ($('#mobile_number').val() == '') {
+                $("#b2 ").html("mobile number can be null ")
+
+                // } else if (mobileNo.length != 10) {
+                //     $("#b2 ").html("enter valid mobile number ")
+                // } else {
+                //     $("#b2 ").html(" ")
+                // status = 0
+            }
+
+
+            if ($('#password1').val() == '') {
+                $("#b3 ").html("password can be null ")
+
+            } else if (password1.length < 6) {
+                $("#b3 ").html("password must be 6 character ")
+            } else {
+                $("#b3 ").html(" ")
+                    // status = 0
+            }
+            if (password1 != password2) {
+                $("#b4 ").html("password must be same ")
+
+            } else {
+                $("#b4 ").html(" ")
+                    // status = 0
+            }
+            if (status == 0) {
+                valid = false;
+            }
+        });
+    </script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

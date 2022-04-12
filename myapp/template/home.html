@@ -6,10 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <style>
+        label{
+            color: blue;
+        }
+        #lab1{
+            color: black;
+        }
+        .cls{
+            color: aquamarine;
+        }
+    </style>
 </head>
 <body>
     <form action="" method="post">
-        <label>
+        <label id="lab1">
             first name:
         </label>
         <input type="text" placeholder="first name:"  name="txt_name" value="ajay" size="5" maxlength="6"/><br />
@@ -17,7 +29,7 @@
             Last name:
         </label>
         <input type="text" placeholder= "Last name:" /><br />
-        <label>
+        <label class="cls">
             address:
         </label>
         <textarea rows="5" cols="15"></textarea><br />
@@ -37,7 +49,7 @@
         <br />
         <label>hobbies:</label>
         <input type="checkbox" checked id="chk_reading" />
-        <label>reading</label>
+        <label class="cls">reading</label>
         <input type="checkbox" />
         <label>writ</label>
         <input type="checkbox" />
@@ -58,5 +70,52 @@
 
     </form> 
     <img src="{% static 'images/masha.jpg'%}" alt="">
+    <h1 style="color: brown;">Hello</h1>
+    <div id="left" style=" width: 750px; ">
+        <h1 >lorem ispum</h1>
+    <p>Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). Begin your journey with VS Code with these introductory</p>
+    </div>
+      <div id="right"style="border: 3px solid green;" >
+        <h1 >lorem ispum</h1>
+    <p>Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). Begin your journey with VS Code with these introductory</p>
+    </div>
+    <form action="" method="post">
+        <label for="">name</label>
+        <input type="text">
+        <br/>
+        <label >message</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br/>
+        <label for="">gender</label>
+        <input type="radio" name="h">m
+        <input type="radio" name="h">f
+        <br/>
+        <label for="">dist</label>
+        <select name="" id="">
+            <option value="">calicut</option>
+            <option value="">calicut</option>
+            <option value="">calicut</option>
+            <option value="">calicut</option>
+        </select>
+        <br>
+        <label for="">intrest;</label>
+        <input type="checkbox" name="" checked id="">
+        <label for="">read</label>
+        <input type="checkbox" name="" id="">
+        <label for="">read</label>
+        <input type="checkbox" name="" id="">
+        <label for="">read</label>
+        <br>
+        <label for="">password</label>
+        <input type="password" name="" id="">
+        <input type="hidden" value="100">
+        <br>
+        <label for="">image</label>
+        <input type="file">
+        <br>
+        <button>click</button>
+        <input type="submit" value="enter" />
+        <input type="reset" name="" id="">
+    </form>
 </body>
 </html>
